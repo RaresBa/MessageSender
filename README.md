@@ -18,3 +18,6 @@ A web application that allows users to send messages to predefined Kafka topics 
 - Local Kafka broker
 - 2–3 predefined topics (e.g., `logs`, `alerts`, `messages`)
 - Integrated via Docker Compose
+
+
+test test

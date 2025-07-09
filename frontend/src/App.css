@@ -1,0 +1,74 @@
+.app {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0077cc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+
+.popup {
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeout 0.5s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+

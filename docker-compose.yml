@@ -1,0 +1,12 @@
+version: "3.8"
+#---> docker version
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+
+
+#--> takes default port as 80, o sa dea run in localhost:3000 
+#--> pt backend o sa avem nevoie de un port diferit 

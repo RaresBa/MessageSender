@@ -66,9 +66,6 @@ graph TD
   - Validates and forwards messages to Kafka
   - Lists topics by querying Kafka
 
-<<<<<<< HEAD
-
----
 
 ## Setup & Installation
 
@@ -96,7 +93,3 @@ graph TD
 
 - **Frontend & Docker & Documentation:** Rares
 - **Backend:** Vlad, John, Irina
-=======
-
-#RUN chmod +x mvnw --> in kafkasender/Dockerfile , deasupra "RUN ./mvnw clean package -DskipTests" pentru mac
->>>>>>> 69d0dad42450b4da3f608540e1aff54f150ef6f7

@@ -1,20 +1,109 @@
 # MessageSender
 
-# KafkaSender
+## Project Overview
 
-A web application that allows users to send messages to predefined Kafka topics through a simple graphical interface. The system is completely containerized using Docker and orchestrated via `docker-compose.yml`.
+Our project is a full-stack web application that allows users to send messages to predefined Kafka topics through a simple and graphical interface. The system is fully containerized using Docker, making it easy to set up and run anywhere.
 
-### Frontend (React)
-- User-friendly interface
-- Text input for messages
-- Dropdown to select a Kafka topic
-- Send button to dispatch messages to the backend
+---
+
+## Features
+
+- Send messages to Kafka topics from a web UI.
+- View and select from available Kafka topics.
+- Fast and responsive frontend built with React, TypeScript, and Vite.
+- Robust backend API made with Spring Boot.
+- Integration with Apache Kafka for real-time messaging.
+- Fully containerized for easy deployment and development.
+
+---
+
+## Architecture
+
+```mermaid
+graph TD
+  A[User] -->|Sends message| B[Frontend (React + Vite)]
+  B -->|POST /api/messages/send| C[Backend (Spring Boot)]
+  C -->|Publishes| D[Kafka Broker]
+  C -->|GET /api/messages/topics| D
+  D -->|Stores & distributes messages| E[Kafka Topics]
+  B <-->|Receives topics| C
+```
+
+---
+
+## Technology Stack
+
+- **Frontend:** React, CSS , Vite
+- **Backend:** Spring Boot
+- **Messaging:** Kafka , Zoo
+- **Containerization:** Docker
+
+---
+
+## Component Details
+
+### Frontend (React + TypeScript + Vite)
+- **Location:** `/frontend`
+- **Key Features:**
+  - User-friendly interface for sending messages
+  - Dropdown to select Kafka topics
+  - Communicates with backend via REST API
+- **How it works:**
+  - Users enter a message and select a topic
+  - On submit, the frontend sends a POST request to the backend
+  - Fetches available topics from the backend
 
 ### Backend (Spring Boot)
-- REST API to receive and forward messages
-- Kafka producer service that publishes messages to the selected topic
+- **Location:** `/kafkasender`
+- **Key Features:**
+  - REST API endpoints for sending messages and listing topics
+  - Integrates with Kafka as a producer
+- **Endpoints:**
+  - `POST /api/messages/send` — Send a message to a Kafka topic
+  - `GET /api/messages/topics` — List available Kafka topics
+- **How it works:**
+  - Receives requests from the frontend
+  - Validates and forwards messages to Kafka
+  - Lists topics by querying Kafka
 
-### Kafka (Dockerized)
-- Local Kafka broker
-- 2–3 predefined topics (e.g., `logs`, `alerts`, `messages`)
-- Integrated via Docker Compose
+### Kafka
+- **Purpose:** Acts as the message broker, storing and distributing messages between backend and any consumers
+- **Topics:** Predefined (e.g., `logs`, `alerts`, `messages`)
+- **How it works:**
+  - Backend publishes messages to topics
+  - Topics can be consumed by other services or tools
+
+### Docker 
+- **Purpose:** Containerizes all components for easy setup and consistent environments
+- **How it works:**
+  - `docker-compose.yml` defines services: frontend, backend, Kafka, Zookeeper
+  - One command starts the entire stack
+
+---
+
+## Setup & Installation
+
+### Prerequisites
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose)
+- 'npm install' in cd frontend for installing package.json
+
+### Quick Start
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/MessageSender.git
+   cd MessageSender
+   ```
+2. **Start all services:**
+   ```sh
+   docker compose up --build
+   ```
+3. **Access the app:**
+   - Frontend: [http://localhost:3000](http://localhost:3000)
+   - Backend API: [http://localhost:8080](http://localhost:8080)
+
+---
+
+## Contribution
+
+- **Frontend & Docker & Documentation:** Rares
+- **Backend:** Vlad, John, Irina

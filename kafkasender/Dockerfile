@@ -5,6 +5,7 @@ WORKDIR /app
 # Copy all project files to the container
 COPY . .
 # Build the application and skip tests for faster build
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # Stage 2: Run the app with a lightweight JRE

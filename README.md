@@ -66,18 +66,7 @@ graph TD
   - Validates and forwards messages to Kafka
   - Lists topics by querying Kafka
 
-### Kafka
-- **Purpose:** Acts as the message broker, storing and distributing messages between backend and any consumers
-- **Topics:** Predefined (e.g., `logs`, `alerts`, `messages`)
-- **How it works:**
-  - Backend publishes messages to topics
-  - Topics can be consumed by other services or tools
-
-### Docker 
-- **Purpose:** Containerizes all components for easy setup and consistent environments
-- **How it works:**
-  - `docker-compose.yml` defines services: frontend, backend, Kafka, Zookeeper
-  - One command starts the entire stack
+<<<<<<< HEAD
 
 ---
 
@@ -107,3 +96,7 @@ graph TD
 
 - **Frontend & Docker & Documentation:** Rares
 - **Backend:** Vlad, John, Irina
+=======
+
+#RUN chmod +x mvnw --> in kafkasender/Dockerfile , deasupra "RUN ./mvnw clean package -DskipTests" pentru mac
+>>>>>>> 69d0dad42450b4da3f608540e1aff54f150ef6f7

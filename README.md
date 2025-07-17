@@ -19,7 +19,6 @@ Our project is a full-stack web application that allows users to send messages t
 
 ## Architecture
 
-```mermaid
 graph TD
   A[User] -->|Sends message| B[Frontend (React + Vite)]
   B -->|POST /api/messages/send| C[Backend (Spring Boot)]
@@ -27,7 +26,6 @@ graph TD
   C -->|GET /api/messages/topics| D
   D -->|Stores & distributes messages| E[Kafka Topics]
   B <-->|Receives topics| C
-```
 
 ---
 

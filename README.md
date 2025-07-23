@@ -73,14 +73,14 @@ graph TD
 
 ### Quick Start
 1. **Clone the repository:**
-   ```sh
+   
    git clone https://github.com/yourusername/MessageSender.git
    cd MessageSender
-   ```
+  
 2. **Start all services:**
-   ```sh
+   
    docker compose up --build
-   ```
+  
 3. **Access the app:**
    - Frontend: [http://localhost:3000](http://localhost:3000)
    - Backend API: [http://localhost:8080](http://localhost:8080)

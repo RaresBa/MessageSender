@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8080' // Adjust this if your backend is on a different port
+const BASE_URL = 'http://localhost:8080' // Adjust this if backend is on a different port
 
 export async function fetchTopics(): Promise<string[]> {
   const res = await fetch(`${BASE_URL}/topics`)

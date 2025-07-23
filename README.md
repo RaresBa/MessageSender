@@ -84,7 +84,7 @@ graph TD
 3. **Access the app:**
    - Frontend: [http://localhost:3000](http://localhost:3000)
    - Backend API: [http://localhost:8080](http://localhost:8080)
-
+d
 ---
 
 ## Contribution

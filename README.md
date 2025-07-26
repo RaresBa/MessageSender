@@ -1,7 +1,4 @@
-# MessageSender - Backend
-
-# KafkaSender
-
+# MessageSender - Backend - KafkaSender
 ## Project Overview
 
 This project is a Spring Boot application that provides a backend for a message-sending system. It implements both a Kafka Producer and a Kafka Consumer, exposing RESTful endpoints to send messages to Kafka and retrieve messages from specific topics. The API is fully documented using Swagger/OpenAPI for easy integration and testing.

@@ -1,6 +1,7 @@
 package com.example.kafkasender.model;
 
-public class MessageRequest {
+public class MessageRequest 
+{
 
     private String topic;
     private String message;
